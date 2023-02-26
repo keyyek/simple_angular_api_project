@@ -4,5 +4,6 @@ export interface Student {
   lastName: string;
   phone: number;
   email: string;
-  gender:string
+  gender: string;
+  profilePhoto: string;
 }

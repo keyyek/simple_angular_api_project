@@ -16,9 +16,29 @@
 
 </div> -->
 
-<div class="card">
+<!-- work good -->
+<!-- <div class="card">
     <h2>{{student_data.firstName}} {{student_data.lastName}}</h2>
     <p>{{student_data.gender}}</p>
     <p>Phone number: {{student_data.phone}}</p>
     <p>Email: {{student_data.email}}</p>
-</div>
+</div> -->
+
+
+<div class="card">
+    <div class="profile_image_proxy">
+        <img class="profile_image" src="{{student_data.profilePhoto}}" alt="image not available">
+    </div>
+    <div>
+        <div class="general_text">
+
+
+            <p class="name_text">{{student_data.firstName}} {{student_data.lastName}}</p>
+            <p class="gender_text">Gender: {{student_data.gender}}</p>
+            <p class="phone_text">Phone: {{student_data.phone}}</p>
+            <p class="fa">&#xf0e0; Email: {{student_data.email}}</p>
+            <p>Unicode:</p>
+            <p class="fa">&#xf0e0;aaa</p>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>

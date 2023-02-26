@@ -11,7 +11,7 @@ import { CardComponent } from '../card/card.component';
 export class CardsComponent implements OnInit {
   page: number = 1;
   count: number = 0;
-  tableSize: number = 5;
+  tableSize: number = 4;
   tableSizes: any = [5, 10, 15, 20];
 
   students: Student[] = [];
