@@ -1,0 +1,35 @@
+<!-- <div class="container" *ngIf="!!students && students.length > 0">
+    <div class="specific-card"
+        *ngFor="let student of students | paginate: {itemsPerPage: tableSize, currentPage:page, totalItems:count}; let i =index">
+        <app-card [student_data]="student"></app-card>
+    </div>
+
+</div>
+<div>
+    <pagination-controls>
+        previousLabel = "Prev"
+        nextLabel = "Next"
+        (pageChange) = "onTableDataChange($event)"
+    </pagination-controls>
+    
+</div> -->
+<!-- <div class="no_student_data" *ngIf="!students || students.length<= 0">
+    <h3 style="color: red;">There is not student available!</h3>
+</div> -->
+<!-- <h1>Angular Pagination Example - ItSolutionStuff.com</h1>
+
+<ul class="list-group">
+  <li *ngFor="let post of students| paginate: { itemsPerPage: tableSize, currentPage: page }" class="list-group-item">
+    {{ post.firstName }}
+  </li>
+
+  <pagination-controls (pageChange)="page = $event"></pagination-controls> -->
+
+
+<div class="list-group" >
+  <!-- <div *ngFor="let student of students| paginate: { itemsPerPage: tableSize, currentPage: page }" class="list-group-item"> -->
+  <div *ngFor="let student of students| paginate: { itemsPerPage: tableSize, currentPage: page }">
+    <app-card [student_data]="student"></app-card>
+  </div>
+</div>
+  <pagination-controls class="bbc" (pageChange)="page = $event"></pagination-controls>

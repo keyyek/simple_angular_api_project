@@ -1,0 +1,10 @@
+.pages{
+    display: flex;
+    justify-content: center;
+    /* margin-left: center; */
+    margin: 10px auto;
+    /* padding-left: 0; */
+    /* margin-left: 0; */
+    /* padding-left: "100px"; */
+    /* font-size: xx-small; */
+  }
