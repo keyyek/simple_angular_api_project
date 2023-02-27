@@ -15,42 +15,26 @@ export class CardsComponent implements OnInit {
   tableSizes: any = [5, 10, 15, 20];
 
   students: Student[] = [];
-  // students:any;
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
-    // this.students = this.studentsService.getAllStudents2()
-    // console.log(this.students);
-    this.postList()
+    this.postList();
   }
 
-  postList():void{
-
-    this.studentsService.getAllStudents().subscribe({
-      next: (students) => {
-        this.students = students;
-        console.log('11111111111111111111111');
-        console.log(this.students);
-        this.students = students;
-      },
-      error: (response) => {
-        console.log('222222222222222222222');
-
-        console.log(response);
-      },
-    });
+  postList(): void {
+    if (localStorage['students_data']) {
+      this.students = JSON.parse(localStorage['students_data']);
+    } else {
+      this.studentsService.getAllStudents().subscribe({
+        next: (students) => {
+          this.students = students;
+          localStorage.setItem('students_data', JSON.stringify(this.students));
+        },
+        error: (response) => {
+          console.log('Error while trying to get student data from server!');
+          console.log(response);
+        },
+      });
+    }
   }
-  onTableDataChange(event: any) {
-    console.log("33");
-    
-    this.page = event;
-    this.postList()
-  }
-
-  // onTableSizeChange(event: any) {
-  //   console.log("44");
-  //   this.tableSize = event.target.value;
-  //   this.page = 1;
-  //   this.postList()
-  // }
 }

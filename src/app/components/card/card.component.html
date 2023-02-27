@@ -31,14 +31,22 @@
     </div>
     <div>
         <div class="general_text">
-
-
-            <p class="name_text">{{student_data.firstName}} {{student_data.lastName}}</p>
-            <p class="gender_text">Gender: {{student_data.gender}}</p>
-            <p class="phone_text">Phone: {{student_data.phone}}</p>
-            <p class="fa">&#xf0e0; Email: {{student_data.email}}</p>
-            <p>Unicode:</p>
-            <p class="fa">&#xf0e0;aaa</p>
-            <i class="fa-solid fa-user"></i>
+            <div class="details_and_icon">
+                <img class="profile_icons" src="../../../assets/icons/user.png" alt="">
+                <p>{{student_data.firstName}} {{student_data.lastName}}</p>
+            </div>
+            <div class="details_and_icon">
+                <img class="profile_icons" src="../../../assets/icons/gender.png" alt="">
+                <p>{{student_data.gender}}</p>
+            </div>
+            <div class="details_and_icon">
+                <img class="profile_icons" src="../../../assets/icons/phone.png" alt="">
+                <p>{{student_data.phone}}</p>
+            </div>
+            <div class="details_and_icon">
+                <img class="profile_icons" src="../../../assets/icons/email.png" alt="">
+                <p>{{student_data.email}}</p>
+            </div>
         </div>
     </div>
+    <!-- <i class="fa">&#xf0e0;</i> -->

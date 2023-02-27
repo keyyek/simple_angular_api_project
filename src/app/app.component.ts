@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'simple_angular_api_project';
 
-
+  
 }

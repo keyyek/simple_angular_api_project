@@ -1,17 +1,12 @@
-.pages{
-    display: flex;
-    justify-content: center;
-    /* margin-left: center; */
-    margin: 10px auto;
-    /* padding-left: 0; */
-    /* margin-left: 0; */
-    /* padding-left: "100px"; */
-    /* font-size: xx-small; */
-  }
+.pages {
+  position: fixed;
+  bottom: 70px;
+  left: 35%;
+}
 
-  .list-group{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-  }
+.list-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
