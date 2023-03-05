@@ -1,6 +1,18 @@
-<div class="header">
+<!-- <div class="header">
     <h1>Information about student pets</h1>
 </div>
 <app-cards>
 
-</app-cards>
+</app-cards> -->
+<div class="header">
+    <h1>Information about student pets</h1>
+    <ul>
+        <li>
+            <a routerLink="/students">Display students</a>
+        </li>
+        <li>
+            <a routerLink="/students/add">add student</a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

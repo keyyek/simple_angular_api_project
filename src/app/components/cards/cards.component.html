@@ -1,6 +1,6 @@
-<div class="list-group">
+<div class="list-group" >
   <!-- <div *ngFor="let student of students| paginate: { itemsPerPage: tableSize, currentPage: page }" class="list-group-item"> -->
-  <div *ngFor="let student of students| paginate: { itemsPerPage: tableSize, currentPage: page }">
+  <div  *ngFor="let student of students| paginate: { itemsPerPage: tableSize, currentPage: page }">
     <app-card [student_data]="student"></app-card>
   </div>
 </div>

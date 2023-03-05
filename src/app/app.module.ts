@@ -7,14 +7,26 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { StudentsListComponent } from './components/students-list/students-list.component';
+import { AddStudentComponent } from './components/add-student/add-student.component';
+import { FormsModule } from '@angular/forms';
+import { EditStudentComponent } from './components/edit-student/edit-student.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, CardsComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    CardsComponent,
+    StudentsListComponent,
+    AddStudentComponent,
+    EditStudentComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

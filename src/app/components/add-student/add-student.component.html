@@ -1,0 +1,24 @@
+<p>add-student works!</p>
+<!-- <form #form="ngForm" (ngSubmit)="addStudent"> -->
+<form #form="ngForm" (ngSubmit)="addStudent()">
+    <label for="name">First name</label>
+    <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a">
+
+    <label for="name">Last name</label>
+    <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b">
+
+    <label for="name">Gender</label>
+    <input type="text" [(ngModel)]="addStudentRequest.gender" name="c">
+
+    <label for="name">Phone</label>
+    <input type="number" [(ngModel)]="addStudentRequest.phone" name="d">
+
+    <label for="name">Email</label>
+    <input type="text" [(ngModel)]="addStudentRequest.email" name="e">
+
+    <label for="name">Profile photo</label>
+    <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f">
+
+    <button type="submit">Save</button>
+
+</form>

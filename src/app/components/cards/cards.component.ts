@@ -12,7 +12,7 @@ export class CardsComponent implements OnInit {
   page: number = 1;
   count: number = 0;
   tableSize: number = 4;
-  tableSizes: any = [5, 10, 15, 20];
+  tableSizes: number[] = [5, 10, 15, 20];
 
   students: Student[] = [];
   constructor(private studentsService: StudentsService) {}

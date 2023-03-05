@@ -1,52 +1,25 @@
-<!-- <div class="card">
-    <label>First name: </label>
-    <label>{{student_data.firstName}}</label>
-    <br>
-    <label>Last name:</label>
-    <label>{{student_data.lastName}}</label>
-    <br>
-    <label>Gender:</label>
-    <label>{{student_data.gender}}</label>
-    <br>
-    <label>Phone number:</label>
-    <label >{{student_data.phone}}</label>
-    <br>
-    <label>Email address:</label>
-    <label >{{student_data.email}}</label>
-
-</div> -->
-
-<!-- work good -->
-<!-- <div class="card">
-    <h2>{{student_data.firstName}} {{student_data.lastName}}</h2>
-    <p>{{student_data.gender}}</p>
-    <p>Phone number: {{student_data.phone}}</p>
-    <p>Email: {{student_data.email}}</p>
-</div> -->
-
-
 <div class="card">
     <div class="profile_image_proxy">
-        <img class="profile_image" src="{{student_data.profilePhoto}}" alt="image not available">
+        <img class="profile_image" src="{{student_data && student_data.profilePhoto}}" alt="image not available">
     </div>
-    <div>
-        <div class="general_text">
-            <div class="details_and_icon">
-                <img class="profile_icons" src="../../../assets/icons/user.png" alt="">
-                <p>{{student_data.firstName}} {{student_data.lastName}}</p>
-            </div>
-            <div class="details_and_icon">
-                <img class="profile_icons" src="../../../assets/icons/gender.png" alt="">
-                <p>{{student_data.gender}}</p>
-            </div>
-            <div class="details_and_icon">
-                <img class="profile_icons" src="../../../assets/icons/phone.png" alt="">
-                <p>{{student_data.phone}}</p>
-            </div>
-            <div class="details_and_icon">
-                <img class="profile_icons" src="../../../assets/icons/email.png" alt="">
-                <p>{{student_data.email}}</p>
-            </div>
+    <div class="general_text" *ngIf="!!student_data">
+        <div class="details_and_icon">
+            <img class="profile_icons" src="../../../assets/icons/user.png" alt="">
+            <p>{{student_data && student_data.firstName}} {{student_data && student_data.lastName}}</p>
         </div>
+        <div class="details_and_icon">
+            <img class="profile_icons" src="../../../assets/icons/gender.png" alt="">
+            <p>{{student_data && student_data.gender}}</p>
+        </div>
+        <div class="details_and_icon">
+            <img class="profile_icons" src="../../../assets/icons/phone.png" alt="">
+            <p>{{student_data && student_data.phone}}</p>
+        </div>
+        <div class="details_and_icon">
+            <img class="profile_icons" src="../../../assets/icons/email.png" alt="">
+            <p>{{student_data && student_data.email}}</p>
+        </div>
+        <button class="more_details_button" [routerLink]="['/edit',student_data.id]">Edit</button>
+
     </div>
-    <!-- <i class="fa">&#xf0e0;</i> -->
+</div>

@@ -1,14 +1,14 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 350px;
-  max-height: 450;
+  max-height: 470;
   margin: auto;
   text-align: center;
   flex: 1;
   margin: 30px 20px;
   padding: 0px 0px;
   width: 350px;
-  height: 450px;
+  height: 470px;
   background-color: #cdcdc0;
   font-family: "Arial, Helvetica, sans-serif";
   color: black;
@@ -19,6 +19,8 @@
 .profile_image {
   margin-top: 20px;
   margin-bottom: 15px;
+  min-width: 200px;
+  min-height: 200px;
   width: 200px;
   height: 200px;
   border-radius: 100%;
@@ -29,16 +31,6 @@
   background-color: #626d71;
   border-radius: 5px;
 }
-
-/* .name_text {
-  margin-top: 20px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: black;
-  text-align: left;
-  padding-left: 10px;
-} */
 
 .general_text {
   margin-top: 25px;
@@ -53,22 +45,24 @@
   display: flex;
   /* justify-content: space-between; */
 }
-.profile_icons{
+.profile_icons {
   width: 25px;
   height: 25px;
   margin-right: 10px;
-  
 }
 
-
-/* .phone_text,
-.email_text,
-.gender_text {
-  font-size: 18px;
-  color: black;
-  text-align: left;
-  padding-left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-
-} */
+.more_details_button {
+  /* background-color: #0095ff; */
+  background-color: #e8891d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgb(255 255 255 / 40%) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  padding: 8px 0.8em;
+  font-size: 14px;
+  margin-left: 0;
+}
