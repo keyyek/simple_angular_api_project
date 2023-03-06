@@ -1,24 +1,40 @@
-<p>add-student works!</p>
-<!-- <form #form="ngForm" (ngSubmit)="addStudent"> -->
-<form #form="ngForm" (ngSubmit)="addStudent()">
-    <label for="name">First name</label>
-    <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a">
+<div class="back-screen">
+    <p>add-student works!</p>
+    <!-- <form #form="ngForm" (ngSubmit)="addStudent"> -->
+    <form #form="ngForm" (ngSubmit)="addStudent()" class="wrapper">
+        <div class="input_field">
+            <label for="name">First name</label>
+            <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a">
+        </div>
+        <div class="input_field">
+            <label for="name">Last name</label>
+            <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b">
+        </div>
+        <div class="input_field">
+            <label for="name">Gender</label>
+            <select name="" id="" [(ngModel)]="addStudentRequest.gender" name="c">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <!-- <input type="text" [(ngModel)]="addStudentRequest.gender" name="c"> -->
+        </div>
+        <div class="input_field">
+            <label for="name">Phone</label>
+            <input type="number" [(ngModel)]="addStudentRequest.phone" name="d">
+        </div>
+        <div class="input_field">
+            <label for="name">Email</label>
+            <input type="text" [(ngModel)]="addStudentRequest.email" name="e">
+        </div>
+        <div class="input_field">
+            <label for="name">Profile photo</label>
+            <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f">
+        </div>
 
-    <label for="name">Last name</label>
-    <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b">
+        <div >
+            <button type="submit" class="save_button">Save</button>
+        </div>
 
-    <label for="name">Gender</label>
-    <input type="text" [(ngModel)]="addStudentRequest.gender" name="c">
-
-    <label for="name">Phone</label>
-    <input type="number" [(ngModel)]="addStudentRequest.phone" name="d">
-
-    <label for="name">Email</label>
-    <input type="text" [(ngModel)]="addStudentRequest.email" name="e">
-
-    <label for="name">Profile photo</label>
-    <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f">
-
-    <button type="submit">Save</button>
-
-</form>
+    </form>
+</div>
