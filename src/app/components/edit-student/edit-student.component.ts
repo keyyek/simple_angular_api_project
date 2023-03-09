@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from 'src/app/models/student.model';
 
+import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-edit-student',
   templateUrl: './edit-student.component.html',
@@ -9,7 +10,7 @@ import { Student } from 'src/app/models/student.model';
 })
 export class EditStudentComponent implements OnInit {
   students: Student[] = [];
-  addStudentRequest: Student | undefined = {
+  addStudentRequest: Student | undefined  = {
     id: '',
     firstName: '',
     lastName: '',
@@ -23,6 +24,7 @@ export class EditStudentComponent implements OnInit {
   ngOnInit(): void {
     this.getLocalStorageData();
   }
+  
 
   getLocalStorageData() {
     if (localStorage['students_data']) {

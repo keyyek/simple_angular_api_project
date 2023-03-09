@@ -1,24 +1,40 @@
-<p>edit-student works!</p>
-<form #form="ngForm" (ngSubmit)="updateStudent()" *ngIf="!!addStudentRequest">
-    <label for="name">First name</label>
-    <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a">
+<div class="back-screen" *ngIf="!!addStudentRequest">
+    <form ngNativeValidate #form="ngForm" (ngSubmit)="updateStudent()" class="wrapper">
+        <h1>Edit User</h1>
+        <div class="input_field">
+            <label for="name">First name</label>
+            <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a" required>
+        </div>
+        <div class="input_field">
+            <label for="name">Last name</label>
+            <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b" required>
+        </div>
+        <div class="input_field">
+            <label for="name">Gender</label>
+            <select class="gender_selection" name="" id="" [(ngModel)]="addStudentRequest.gender" name="c" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
 
-    <label for="name">Last name</label>
-    <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b">
+        </div>
+        <div class="input_field">
+            <label for="name">Phone</label>
+            <input type="number" [(ngModel)]="addStudentRequest.phone" name="d" required>
+        </div>
+        <div class="input_field">
+            <label for="name">Email</label>
+            <input type="email" [(ngModel)]="addStudentRequest.email" name="e" required>
+        </div>
+        <div class="input_field">
+            <label for="name">Profile photo</label>
+            <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f" required>
+        </div>
 
-    <label for="name">Gender</label>
-    <input type="text" [(ngModel)]="addStudentRequest.gender" name="c">
+        <div>
+            <button type="submit" class="save_changes_button">Save changes</button>
+            <button class="delete_button" (click)="deleteStudent()">Delete</button>
+        </div>
 
-    <label for="name">Phone</label>
-    <input type="number" [(ngModel)]="addStudentRequest.phone" name="d">
-
-    <label for="name">Email</label>
-    <input type="text" [(ngModel)]="addStudentRequest.email" name="e">
-
-    <label for="name">Profile photo</label>
-    <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f">
-
-    <button type="submit">Save</button>
-    <button (click)="deleteStudent()">Delete</button>
-
-</form>
+    </form>
+</div>

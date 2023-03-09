@@ -1,38 +1,37 @@
 <div class="back-screen">
-    <p>add-student works!</p>
-    <!-- <form #form="ngForm" (ngSubmit)="addStudent"> -->
-    <form #form="ngForm" (ngSubmit)="addStudent()" class="wrapper">
+    <form ngNativeValidate #form="ngForm" (ngSubmit)="addStudent()" class="wrapper">
+        <h1>Add User</h1>
         <div class="input_field">
             <label for="name">First name</label>
-            <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a">
+            <input type="text" [(ngModel)]="addStudentRequest.firstName" name="a" required>
         </div>
         <div class="input_field">
             <label for="name">Last name</label>
-            <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b">
+            <input type="text" [(ngModel)]="addStudentRequest.lastName" name="b" required>
         </div>
         <div class="input_field">
             <label for="name">Gender</label>
-            <select name="" id="" [(ngModel)]="addStudentRequest.gender" name="c">
+            <select class="gender_selection" name="" id="" [(ngModel)]="addStudentRequest.gender" name="c" required>
                 <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
-            <!-- <input type="text" [(ngModel)]="addStudentRequest.gender" name="c"> -->
+
         </div>
         <div class="input_field">
             <label for="name">Phone</label>
-            <input type="number" [(ngModel)]="addStudentRequest.phone" name="d">
+            <input type="number" [(ngModel)]="addStudentRequest.phone" name="d" required>
         </div>
         <div class="input_field">
             <label for="name">Email</label>
-            <input type="text" [(ngModel)]="addStudentRequest.email" name="e">
+            <input type="email" [(ngModel)]="addStudentRequest.email" name="e" required>
         </div>
         <div class="input_field">
             <label for="name">Profile photo</label>
-            <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f">
+            <input type="text" [(ngModel)]="addStudentRequest.profilePhoto" name="f" required>
         </div>
 
-        <div >
+        <div>
             <button type="submit" class="save_button">Save</button>
         </div>
 
